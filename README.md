@@ -2,4 +2,6 @@
 
    Predicting final student grades (G3) from demographic, social, and school-related features using multiple linear regression.
 
-   Status: Proposal under review
+<<<<<<< HEAD
+Status: Project setup complete; proposal under review
+>>>>>>> main
