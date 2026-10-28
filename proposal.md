@@ -28,10 +28,9 @@ can a multiple linear regression model predict it?
    *Method:* supervised classification (pass/fail style outcomes).
    *Finding:* reported classification accuracy of about 70-75%, showing that
    earlier grades carry most of the predictive signal.
-   *Gap:* it treats the outcome as a category, uses university data, and
-   focuses on accuracy rather than the size of each factor's effect. This
-   project models a continuous grade (G3) in secondary school and estimates
-   each predictor's effect.
+   *Gap:* it reports relative feature importance from its data-mining
+   models, but not linear-regression coefficients (direction, magnitude,
+   confidence intervals, significance tests) for each predictor.
 
 **Synthesis:** Existing work emphasizes predictive accuracy using
 black-box models. This project instead uses interpretable linear regression
