@@ -3,3 +3,4 @@ pandas>=2.0
 scikit-learn>=1.3
 jupyterlab>=4.0
 ipykernel>=6.25
+nbconvert>=7.8
