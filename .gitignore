@@ -1,7 +1,25 @@
-   __pycache__/
-   *.pyc
-   .ipynb_checkpoints/
-   .venv/
-   .env
-   .DS_Store
-   *.log
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments and local secrets
+.venv/
+venv/
+.env
+.env.*
+
+# OS/editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logs
+*.log
+
+# Raw dataset files (download separately; see data/README.md)
+data/student-mat.csv
+data/student-por.csv
