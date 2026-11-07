@@ -14,8 +14,8 @@ The analysis is predictive and exploratory. It will not interpret feature associ
 - **License:** CC BY 4.0, with attribution.
 - **Expected size:** 395 student records and 33 columns in the original Mathematics CSV.
 - **Target:** `G3`, the final Mathematics grade on a 0–20 scale.
-- **Primary candidate features:** `age`, `studytime`, `failures`, `absences`, `famrel`, `freetime`, `goout`, and `health`.
-- **Engineered features:** `prior_failure_flag` (1 if `failures > 0`, otherwise 0) and `studytime_high` (1 if the reported study-time category is 3 or 4, otherwise 0).
+- **Primary candidate features:** `age`, `studytime`, `absences`, `famrel`, `freetime`, `goout`, and `health`.
+- **Engineered features:** `prior_failure_flag` (1 if `failures > 0`, otherwise 0) and `studytime_high` (1 if the reported study-time category is 3 or 4, otherwise 0). The raw `failures` variable is used to construct the indicator and is then excluded from the model matrix to avoid redundant predictors.
 
 The primary model intentionally excludes `G1` and `G2`. UCI notes that these earlier grades are strongly correlated with G3; including them may inflate apparent predictive performance and is less aligned with a question about prediction from non-grade characteristics.
 
@@ -30,7 +30,7 @@ The primary model intentionally excludes `G1` and `G2`. UCI notes that these ear
 
 ## 4. Feature engineering
 
-The two binary indicators described above provide a simple alternative representation of prior failure and higher reported study-time category. They are added alongside the original numeric predictors rather than replacing them. `G1` and `G2` will be excluded from the primary model; a later sensitivity analysis could include them, but it must be clearly labelled as a different prediction scenario.
+The two binary indicators described above provide a simple alternative representation of prior failure and higher reported study-time category. They are added alongside the original numeric predictors. The raw `failures` variable is used for feature construction but excluded from the final predictor matrix. `G1` and `G2` will be excluded from the primary model; a later sensitivity analysis could include them, but it must be clearly labelled as a different prediction scenario.
 
 ## 5. Models and rationale
 
